@@ -1,0 +1,291 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    color: #333;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #3498db, #6E5A88);
+    padding-top: 20px;
+  }
+  
+  .sidebar a {
+    padding: 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background: linear-gradient(to right, #2980b9, #6E5A88);
+  }
+  
+  .dashboard {
+    margin-left: 200px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .header {
+    background: linear-gradient(to right, #3498db, #6E5A88);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #2980b9;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: linear-gradient(to right, #ecf0f1, #bdc3c7);
+    border-bottom: 2px solid #bdc3c7;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabs {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tabs button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    background: linear-gradient(to right, #3498db, #6E5A88);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .tabs button:hover {
+    background: linear-gradient(to right, #2980b9, #6E5A88);
+  }
+  
+  .tabs button.active {
+    background: linear-gradient(to right, #2980b9, #6E5A88);
+  }
+  
+  .tabs button span {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .actions {
+    margin-right: 10px;
+  }
+  
+  .actions button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #e74c3c, #9D50BB);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .actions button:hover {
+    background: linear-gradient(to right, #c0392b, #8E44AD);
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search input {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    background: linear-gradient(to right, #ecf0f1, #bdc3c7);
+  }
+  
+  .search button {
+    padding: 10px;
+    margin-left: 5px;
+    background: linear-gradient(to right, #3498db, #6E5A88);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .search button:hover {
+    background: linear-gradient(to right, #2980b9, #6E5A88);
+  }
+  
+  .sort-users,
+  .toggle-view {
+    padding: 12px 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #2ecc71, #5F9F62);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  .sort-users:hover,
+  .toggle-view:hover {
+    background: linear-gradient(to right, #27ae60, #4D8D4A);
+  }
+  
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .user-card {
+    width: 200px;
+    margin: 10px;
+    padding: 15px;
+    background: linear-gradient(to right, #ecf0f1, #bdc3c7);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .user-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .user-card p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .user-card button {
+    padding: 10px;
+    margin-top: 10px;
+    background: linear-gradient(to right, #3498db, #6E5A88);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .user-card button:hover {
+    background: linear-gradient(to right, #2980b9, #6E5A88);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background: linear-gradient(to right, #fefefe, #D6D6D6);
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-feedback {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: none;
+  }
+  
+  .user-feedback.success {
+    background: linear-gradient(to right, #2ecc71, #5F9F62);
+  }
+  
+  .user-feedback.error {
+    background: linear-gradient(to right, #e74c3c, #9D50BB);
+  }
+  
+  /* Dark Mode Styles */
+  .dark-mode {
+    background: linear-gradient(to right, #333, #5a5a5a);
+    color: #fff;
+  }
+  
+  .dark-mode .header {
+    background: linear-gradient(to right, #555, #787878);
+    border-bottom: 2px solid #444;
+  }
+  
+  .dark-mode .controls {
+    background: linear-gradient(to right, #444, #555);
+    border-bottom: 2px solid #333;
+  }
+  
+  .dark-mode .tabs button,
+  .dark-mode .actions button,
+  .dark-mode .search button,
+  .dark-mode .sort-users,
+  .dark-mode .toggle-view {
+    background: linear-gradient(to right, #4a90e2, #5872a8);
+  }
+  
+  .dark-mode .tabs button:hover,
+  .dark-mode .actions button:hover,
+  .dark-mode .search button:hover,
+  .dark-mode .sort-users:hover,
+  .dark-mode .toggle-view:hover {
+    background: linear-gradient(to right, #3669b8, #4E639F);
+  }
+  
+  .dark-mode .user-card {
+    background: linear-gradient(to right, #555, #787878);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-mode .user-card p {
+    color: #fff;
+  }
+  
+  .dark-mode .user-card button {
+    background: linear-gradient(to right, #4a90e2, #5872a8);
+    color: #fff;
+  }
+  
+  .dark-mode .user-card button:hover {
+    background: linear-gradient(to right, #3669b8, #4E639F);
+  }
+  

@@ -1,0 +1,32 @@
+{
+  "pending": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "status": "Pending",
+      "riskLevel": "Low"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "status": "Pending",
+      "riskLevel": "Medium"
+    }
+  ],
+  "completed": [
+    {
+      "id": 3,
+      "name": "Alice Brown",
+      "status": "Completed",
+      "riskLevel": "High"
+    },
+    {
+      "id": 4,
+      "name": "Bob Johnson",
+      "status": "Completed",
+      "riskLevel": "Low"
+    }
+  ]
+}
+
+  

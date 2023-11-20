@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dash.css">
+  <title>Monitoring Dashboard</title>
+</head>
+<body>
+
+  <div class="sidebar">
+    <a href="#" class="active" onclick="switchSection('Overview')">Overview</a>
+    <a href="#" onclick="switchSection('Onboarding')">Onboarding</a>
+    <a href="#" onclick="switchSection('Monitoring')">Monitoring</a>
+    <a href="#" onclick="switchSection('Flagging')">Flagging</a>
+    <a href="#" onclick="switchSection('SourceOfIncome')">Source of Income</a>
+    <a href="#" onclick="switchSection('UAR')">UAR</a>
+  </div>
+
+  
+
+  <div class="dashboard">
+    <div class="header">
+      <h1 id="sectionTitle">Monitoring Dashboard</h1>
+      <div class="controls">
+        <div class="tabs">
+          <button class="active" onclick="switchTab('pending')">Pending <span id="pendingCount">(0)</span></button>
+          <button onclick="switchTab('completed')">Completed <span id="completedCount">(0)</span></button>
+        </div>
+        <div class="actions">
+          <button onclick="openSearch()">Search</button>
+          <button onclick="toggleRiskLevel()">Risk Level</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Search...">
+      <button onclick="search()">Go</button>
+    </div>
+
+    <div class="user-list" id="userList"></div>
+
+    <div class="modal" id="userDetailsModal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="userDetails"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="dash.js"></script>
+</body>
+</html>
